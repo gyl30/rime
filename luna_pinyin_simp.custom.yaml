@@ -1,0 +1,10 @@
+patch:
+  "translator/dictionary": luna_pinyin_simp.extended
+  "recognizer/patterns/punct": "^/([A-Z|a-z]*|[0-9]|10)$"
+  engine/translators:
+    - punct_translator
+    - table_translator@custom_phrase
+    - reverse_lookup_translator
+    - script_translator
+  punctuator:
+    import_preset: symbols

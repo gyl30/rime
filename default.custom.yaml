@@ -1,0 +1,43 @@
+patch:
+  schema_list:
+    - {schema: luna_pinyin_simp}
+  menu:
+    {page_size: 8} 
+    
+  "switcher/hotkeys": 
+    - F4
+  "ascii_composer/good_old_caps_lock": true
+  "ascii_composer/switch_key":  
+    Caps_Lock: clear #大小写切换键
+    Control_L: noop #左ctrl
+    Control_R: noop #右ctrl
+    Shift_L: commit_code #左shift
+    Shift_R: commit_text #右shift
+
+  recognizer:
+    patterns:
+      email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+      uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+      url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+      
+      
+  key_binder/bindings:
+    - accept: "Control+p"
+      send: "Up"
+      when: "composing"
+    - accept: "Control+n"
+      send: "Down"
+      when: "composing"
+    - accept: "Control+b"
+      send: "Left"
+      when: "composing"
+    - accept: "Control+f"
+      send: "Right"
+      
+    - accept: "Tab"
+      send: "Down"
+      when: "has_menu"
+    - accept: "Shift+Tab"
+      send: "Up"
+      when: "has_menu"
+      
