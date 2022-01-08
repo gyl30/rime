@@ -12,7 +12,7 @@ use_preset_vocabulary: true
 import_tables:                                                                                          
   - dicts/clover/clover.base # 单字，四叶草                                                             
   - dicts/clover/clover.phrase # 词组                                                                                                                                                           
-  - dicts/luna_pinyin
+    #  - dicts/luna_pinyin
   - dicts/other/zhwiki                                                                                                                                                        
   - dicts/thuocl/THUOCL_IT 
   - dicts/thuocl/THUOCL_chengyu # 本词表包含了大量成语词汇                                              
@@ -32,6 +32,7 @@ import_tables:
 
 瑾昀	jin yun	100
 瑾昀 #支持自动注音
+帧	zhen	579392146
 ACsediment	acse	100 #输入acse就会出现ACsediment
 ACsediment	a ci si e	100 #同样可以实现输入acse出现ACsediment
 ACsediment	acsediment #编码中间可以不出现空格
